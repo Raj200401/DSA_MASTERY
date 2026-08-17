@@ -3,14 +3,11 @@ class Solution {
         HashMap<Integer,Integer> mpp=new HashMap<>();
         ArrayList<Integer> result=new ArrayList<>();
         int n=nums.length;
-        int great=n/3;
-        for(int num:nums){
-            mpp.put(num,mpp.getOrDefault(num,0)+1);
-        }
-
-        for(int num:mpp.keySet()){
-            if(mpp.get(num)>great){
-                result.add(num);
+        int min=n/3+1;
+        for(int i=0;i<n;i++){
+            mpp.put(nums[i],mpp.getOrDefault(nums[i],0)+1);
+            if(mpp.get(nums[i])==min){
+                result.add(nums[i]);
             }
         }
         return result;
