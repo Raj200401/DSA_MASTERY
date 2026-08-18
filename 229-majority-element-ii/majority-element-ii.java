@@ -23,19 +23,10 @@ class Solution {
             }
         }
 
-        int c=0;
+        
         int req=n/3+1;
-        if (ele1==ele2){
-            for(int i=0;i<n;i++){
-                if(nums[i]==ele1){
-                    c++;
-                }
-            }
-        }
-        if(c>=req) {
-            result.add(ele1);
-        return result;
-        }
+        
+        
         int c1=0;
         int c2=0;
         for(int i=0;i<n;i++){
@@ -49,7 +40,7 @@ class Solution {
                 c2++;
             }
         }
-        if(c2>=req) result.add(ele2);
+        if(c2>=req && ele1!=ele2) result.add(ele2);
         return result;
     }
 } 
