@@ -5,7 +5,7 @@ class Solution {
 
      for(int i=0;i<m;i++){
         for(int j=i+1;j<n;j++){
-            swap(matrix,i,j);
+            transpose(matrix,i,j);
         }
      }
 
@@ -22,7 +22,7 @@ class Solution {
      }
     }
 
-    public void swap(int[][]matrix,int a,int b){
+    public void transpose(int[][]matrix,int a,int b){
         int temp=matrix[a][b];
         matrix[a][b]=matrix[b][a];
         matrix[b][a]=temp;
